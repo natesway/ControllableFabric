@@ -1,0 +1,32 @@
+{
+  "required": true,
+  "package": "com.mrcrayfish.controllable.mixin",
+  "plugin": "com.mrcrayfish.controllable.mixin.ControllableMixinPlugin",
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.8",
+  "client": [
+    "client.ContainerScreenMixin",
+    "client.GameRendererMixin",
+    "client.KeyMappingMixin",
+    "client.MinecraftMixin",
+    "client.MouseHelperMixin",
+    "client.OptifineGameRendererMixin",
+    "client.RecipeBookComponentMixin",
+    "client.RecipeBookPageAccessor",
+    "client.RecipeBookPageMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "ConfigTrackerMixin",
+    "ConfigValueAccessor",
+    "RangeAccessor",
+    "client.EventTaxiInfiltrator",
+    "client.LivingEntityMixin",
+    "client.LocalPlayerMixin",
+    "client.MinecraftClientMixin",
+    "client.ModMenuMixin",
+    "client.RawMouseClickEventMixin"
+  ]
+}

@@ -1,0 +1,26 @@
+accessWidener v2 named
+
+accessible field net/minecraft/client/gui/screens/inventory/AbstractContainerScreen hoveredSlot Lnet/minecraft/world/inventory/Slot;
+
+accessible field net/minecraft/client/gui/components/AbstractSelectionList y0 I
+accessible field net/minecraft/client/gui/components/AbstractSelectionList y1 I
+accessible field net/minecraft/client/MouseHandler activeButton I
+accessible field net/minecraft/client/MouseHandler lastMouseEventTime D
+accessible field net/minecraft/client/Minecraft rightClickDelay I
+accessible method net/minecraft/client/Minecraft startUseItem ()V
+accessible method net/minecraft/client/Minecraft startAttack ()Z
+accessible method net/minecraft/client/Minecraft pickBlock ()V
+accessible field net/minecraft/client/gui/screens/inventory/AbstractContainerScreen leftPos I
+accessible field net/minecraft/client/gui/screens/inventory/AbstractContainerScreen topPos I
+accessible field net/minecraft/client/gui/screens/inventory/AbstractContainerScreen imageWidth I
+accessible field net/minecraft/client/gui/screens/inventory/AbstractContainerScreen imageHeight I
+accessible field net/minecraft/client/MouseHandler activeButton I
+accessible field net/minecraft/client/MouseHandler lastMouseEventTime D
+accessible method net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen selectTab (Lnet/minecraft/world/item/CreativeModeTab;)V
+accessible field net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen scrollOffs F
+accessible field net/minecraft/client/gui/components/ChatComponent trimmedMessages Ljava/util/List;
+accessible method net/minecraft/client/gui/screens/inventory/AbstractContainerScreen slotClicked (Lnet/minecraft/world/inventory/Slot;IILnet/minecraft/world/inventory/ClickType;)V
+accessible field net/minecraft/client/KeyMapping key Lcom/mojang/blaze3d/platform/InputConstants$Key;
+accessible method net/minecraft/client/gui/components/AbstractSelectionList getRowTop (I)I
+accessible method net/minecraft/client/gui/components/AbstractSelectionList getRowBottom (I)I
+accessible field net/minecraft/client/KeyMapping clickCount I
