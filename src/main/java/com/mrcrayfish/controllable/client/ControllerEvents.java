@@ -7,7 +7,7 @@ import com.mrcrayfish.controllable.Controllable;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.UseAnim;
-import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
+import com.jab125.api.LivingEntityUseItemEvent;
 
 /**
  * Author: MrCrayfish

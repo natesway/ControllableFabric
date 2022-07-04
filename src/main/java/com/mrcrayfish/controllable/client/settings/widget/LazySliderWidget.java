@@ -1,12 +1,10 @@
 package com.mrcrayfish.controllable.client.settings.widget;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.components.AbstractSliderButton;
 import net.minecraft.client.gui.components.TooltipAccessor;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.FormattedCharSequence;
-import net.minecraftforge.api.ForgeSlider;
+import com.jab125.api.ForgeSlider;
 
 import java.util.Collections;
 import java.util.List;

@@ -1,9 +1,4 @@
-/*
- * Copyright (c) Forge Development LLC and contributors
- * SPDX-License-Identifier: LGPL-2.1-only
- */
-
-package net.minecraftforge.api;
+package com.jab125.api;
 
 import net.minecraft.client.gui.components.AbstractSliderButton;
 import net.minecraft.network.chat.Component;
@@ -12,9 +7,6 @@ import org.lwjgl.glfw.GLFW;
 
 import java.text.DecimalFormat;
 
-/**
- * Slider widget implementation which allows inputting values in a certain range with optional step size.
- */
 public class ForgeSlider extends AbstractSliderButton
 {
     protected Component prefix;
@@ -22,28 +14,11 @@ public class ForgeSlider extends AbstractSliderButton
 
     protected double minValue;
     protected double maxValue;
-
-    /** Allows input of discontinuous values with a certain step */
     protected double stepSize;
 
     protected boolean drawString;
 
     private final DecimalFormat format;
-
-    /**
-     * @param x x position of upper left corner
-     * @param y y position of upper left corner
-     * @param width Width of the widget
-     * @param height Height of the widget
-     * @param prefix {@link Component} displayed before the value string
-     * @param suffix {@link Component} displayed after the value string
-     * @param minValue Minimum (left) value of slider
-     * @param maxValue Maximum (right) value of slider
-     * @param currentValue Starting value when widget is first displayed
-     * @param stepSize Size of step used. Precision will automatically be calculated based on this value if this value is not 0.
-     * @param precision Only used when {@code stepSize} is 0. Limited to a maximum of 4 (inclusive).
-     * @param drawString Should text be displayed on the widget
-     */
     public ForgeSlider(int x, int y, int width, int height, Component prefix, Component suffix, double minValue, double maxValue, double currentValue, double stepSize, int precision, boolean drawString)
     {
         super(x, y, width, height, Component.empty(), 0D);
@@ -81,41 +56,26 @@ public class ForgeSlider extends AbstractSliderButton
         this.updateMessage();
     }
 
-    /**
-     * Overload with {@code stepSize} set to 1, useful for sliders with whole number values.
-     */
     public ForgeSlider(int x, int y, int width, int height, Component prefix, Component suffix, double minValue, double maxValue, double currentValue, boolean drawString)
     {
         this(x, y, width, height, prefix, suffix, minValue, maxValue, currentValue, 1D, 0, drawString);
     }
 
-    /**
-     * @return Current slider value as a double
-     */
     public double getValue()
     {
         return this.value * (maxValue - minValue) + minValue;
     }
 
-    /**
-     * @return Current slider value as an long
-     */
     public long getValueLong()
     {
         return Math.round(this.getValue());
     }
 
-    /**
-     * @return Current slider value as an int
-     */
     public int getValueInt()
     {
         return (int) this.getValueLong();
     }
 
-    /**
-     * @param value The new slider value
-     */
     public void setValue(double value)
     {
         this.value = this.snapToNearest((value - this.minValue) / (this.maxValue - this.minValue));
@@ -176,10 +136,6 @@ public class ForgeSlider extends AbstractSliderButton
         this.updateMessage();
     }
 
-    /**
-     * Snaps the value, so that the displayed value is the nearest multiple of {@code stepSize}.
-     * If {@code stepSize} is 0, no snapping occurs.
-     */
     private double snapToNearest(double value)
     {
         if(stepSize <= 0D)

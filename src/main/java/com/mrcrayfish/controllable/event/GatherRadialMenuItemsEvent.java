@@ -2,7 +2,7 @@ package com.mrcrayfish.controllable.event;
 
 import com.google.common.collect.ImmutableList;
 import com.mrcrayfish.controllable.client.RadialMenuHandler;
-import net.minecraftforge.eventbus.api.Event;
+import com.jab125.api.Event;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,8 @@
 package com.mrcrayfish.controllable.event;
 
 import com.mrcrayfish.controllable.client.Controller;
-import net.minecraftforge.eventbus.api.Cancelable;
-import net.minecraftforge.eventbus.api.Event;
+import com.jab125.api.Cancelable;
+import com.jab125.api.Event;
 
 /**
  * Author: MrCrayfish

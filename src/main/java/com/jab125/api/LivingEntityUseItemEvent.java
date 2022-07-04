@@ -1,10 +1,10 @@
-package net.minecraftforge.event.entity.living;
+package com.jab125.api;
 
 import com.jab125.thonkutil.api.events.EventTaxi;
 import com.jab125.thonkutil.api.events.EventTaxiEvent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.eventbus.api.Cancelable;
+import com.jab125.api.Cancelable;
 import org.jetbrains.annotations.NotNull;
 
 public class LivingEntityUseItemEvent extends EventTaxiEvent
@@ -46,17 +46,6 @@ public class LivingEntityUseItemEvent extends EventTaxiEvent
         this.duration = duration;
     }
 
-    /**
-     * Fired when a player starts 'using' an item, typically when they hold right mouse.
-     * Examples:
-     *   Drawing a bow
-     *   Eating Food
-     *   Drinking Potions/Milk
-     *   Guarding with a sword
-     *
-     * Cancel the event, or set the duration or {@literal <=} 0 to prevent it from processing.
-     *
-     */
     @Cancelable
     public static class Start extends LivingEntityUseItemEvent
     {
@@ -66,12 +55,6 @@ public class LivingEntityUseItemEvent extends EventTaxiEvent
         }
     }
 
-    /**
-     * Fired every tick that a player is 'using' an item, see {@link Start} for info.
-     *
-     * Cancel the event, or set the duration or {@literal <=} 0 to cause the player to stop using the item.
-     *
-     */
     @Cancelable
     public static class Tick extends LivingEntityUseItemEvent
     {
