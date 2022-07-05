@@ -28,7 +28,7 @@ public class ControllerList extends AbstractSelectionList<ControllerEntry>
     {
         this.clearEntries();
         Map<Integer, String> controllers = this.manager.getControllers();
-        System.out.println(controllers);
+        //System.out.println(controllers);
         controllers.forEach((jid, name) -> {
             this.addEntry(new ControllerEntry(this, jid));
         });

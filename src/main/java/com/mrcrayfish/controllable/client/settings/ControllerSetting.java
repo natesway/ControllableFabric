@@ -19,6 +19,7 @@ public abstract class ControllerSetting<T>
     protected final Component label;
     protected final List<FormattedCharSequence> tooltip;
     protected final ForgeConfigSpec.ConfigValue<T> configValue;
+    protected boolean disabled = false;
 
     public ControllerSetting(String key, ForgeConfigSpec.ConfigValue<T> configValue)
     {
@@ -26,6 +27,8 @@ public abstract class ControllerSetting<T>
         this.tooltip = I18n.exists(key + ".desc") ? Minecraft.getInstance().font.split(Component.translatable(key + ".desc"), 200) : Collections.emptyList();
         this.configValue = configValue;
     }
+
+    public ControllerSetting<T> disabled() {disabled=true;return this;}
 
     public abstract Supplier<AbstractWidget> createWidget(int x, int y, int width, int height);
 }

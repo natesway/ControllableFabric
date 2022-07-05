@@ -26,6 +26,7 @@ import com.mrcrayfish.controllable.integration.JustEnoughItems;
 import com.mrcrayfish.controllable.mixin.client.CreativeModeInventoryScreenMixin;
 import com.mrcrayfish.controllable.mixin.client.RecipeBookComponentMixin;
 import com.mrcrayfish.controllable.mixin.client.RecipeBookPageAccessor;
+import com.terraformersmc.modmenu.gui.ModsScreen;
 import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.fabricmc.fabric.impl.item.group.CreativeGuiExtensions;
 import net.minecraft.client.CameraType;
@@ -678,6 +679,18 @@ public class ControllerInput
                     });
                 }
             }
+            else if(ButtonBindings.PAUSE_GAME.isButtonPressed())
+            {
+                if (mc.screen != null) {
+                    if (mc.screen.shouldCloseOnEsc()) {
+                        mc.screen.onClose();
+                    }
+                }
+                else if(mc.player != null)
+                {
+                    mc.pauseGame(false);
+                }
+            }
             else if(mc.screen == null)
             {
                 if(ButtonBindings.INVENTORY.isButtonPressed() && mc.gameMode != null && mc.player != null)
@@ -734,13 +747,7 @@ public class ControllerInput
                 {
                     cycleThirdPersonView();
                 }
-                else if(ButtonBindings.PAUSE_GAME.isButtonPressed())
-                {
-                    if(mc.player != null)
-                    {
-                        mc.pauseGame(false);
-                    }
-                }
+
                 else if(ButtonBindings.ADVANCEMENTS.isButtonPressed())
                 {
                     if(mc.player != null)

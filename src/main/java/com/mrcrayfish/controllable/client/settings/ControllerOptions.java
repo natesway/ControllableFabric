@@ -29,8 +29,8 @@ public class ControllerOptions
 
     public static final ControllerSetting<Boolean> AUTO_SELECT = createToggleSetting("controllable.options.autoSelect", Config.CLIENT.options.autoSelect);
     public static final ControllerSetting<Boolean> RENDER_MINI_PLAYER = createToggleSetting("controllable.options.renderMiniPlayer", Config.CLIENT.options.renderMiniPlayer);
-    public static final ControllerSetting<Boolean> VIRTUAL_MOUSE = createToggleSetting("controllable.options.virtualMouse", Config.CLIENT.options.virtualMouse);
-    public static final ControllerSetting<Boolean> CONSOLE_HOTBAR = createToggleSetting("controllable.options.consoleHotbar", Config.CLIENT.options.consoleHotbar);
+    public static final ControllerSetting<Boolean> VIRTUAL_MOUSE = createToggleSetting("controllable.options.virtualMouse", Config.CLIENT.options.virtualMouse).disabled();
+    public static final ControllerSetting<Boolean> CONSOLE_HOTBAR = createToggleSetting("controllable.options.consoleHotbar", Config.CLIENT.options.consoleHotbar).disabled();
     public static final ControllerSetting<CursorType> CURSOR_TYPE = createValuesSetting("controllable.options.cursorType", CursorType.class, Config.CLIENT.options.cursorType);
     public static final ControllerSetting<ControllerIcons> CONTROLLER_ICONS = createValuesSetting("controllable.options.controllerIcons", ControllerIcons.class, Config.CLIENT.options.controllerIcons);
     public static final ControllerSetting<Boolean> INVERT_LOOK = createToggleSetting("controllable.options.invertLook", Config.CLIENT.options.invertLook);
