@@ -26,7 +26,7 @@ public class GameRendererMixin
         if(Controllable.getController() != null && Config.CLIENT.options.virtualMouse.get() && input.getLastUse() > 0)
         {
             Minecraft minecraft = Minecraft.getInstance();
-            return (int) (input.getVirtualMouseX() * (double) minecraft.getWindow().getGuiScaledWidth() / (double) minecraft.getWindow().getScreenWidth() / 2);
+            return (int) (input.getVirtualMouseX() * (double) minecraft.getWindow().getGuiScaledWidth() / (double) minecraft.getWindow().getScreenWidth());
         }
         return mouseX;
     }
@@ -38,7 +38,7 @@ public class GameRendererMixin
         if(Controllable.getController() != null && Config.CLIENT.options.virtualMouse.get() && input.getLastUse() > 0)
         {
             Minecraft minecraft = Minecraft.getInstance();
-            return (int) (input.getVirtualMouseY() * (double) minecraft.getWindow().getGuiScaledHeight() / (double) minecraft.getWindow().getScreenHeight() / 2);
+            return (int) (input.getVirtualMouseY() * (double) minecraft.getWindow().getGuiScaledHeight() / (double) minecraft.getWindow().getScreenHeight());
         }
         return mouseY;
     }
